@@ -1,12 +1,18 @@
 from os import path, getenv
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Config:
-    API_ID = int(getenv("API_ID", "0112234"))
-    API_HASH = getenv("API_HASH", "abcdefg")
-    BOT_TOKEN = getenv("BOT_TOKEN", "1234567891:AdDfgFRFVVfDEhdhyjjvjjftSEW")
-    FSUB = getenv("FSUB", "SDBotz")
-    CHID = int(getenv("CHID", "-1000112234"))
-    SUDO = list(map(int, getenv("SUDO").split()))
-    MONGO_URI = getenv("MONGO_URI", "")
+    API_ID = int(getenv("API_ID", "17468849"))
+    API_HASH = getenv("API_HASH", "36c072effa318649bdc42db4cda2c4eb")
+    BOT_TOKEN = getenv("BOT_TOKEN", "8264446461:AAF4xNmRI_QgtI4ch4MN7v8CkuwSCqgTDJE")
+    FSUB = getenv("FSUB", "rizzxbots")
+    CHID = int(getenv("CHID", "-1002708353673"))
     
+    # ✅ Fixed SUDO parsing with fallback to empty list
+    SUDO = list(map(int, (getenv("SUDO") or "").split()))
+    
+    MONGO_URI = getenv("MONGO_URI", "")
+
 cfg = Config()
