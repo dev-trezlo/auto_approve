@@ -8,7 +8,7 @@ class Config:
     API_HASH = getenv("API_HASH", "36c072effa318649bdc42db4cda2c4eb")
     BOT_TOKEN = getenv("BOT_TOKEN", "8264446461:AAF4xNmRI_QgtI4ch4MN7v8CkuwSCqgTDJE")
     FSUB = getenv("FSUB", "rizzxbots")
-    CHID = int(getenv("CHID", "-1002708353673"))
+    CHID = getenv("CHID", "@rizzxbots")
     
     # ✅ Fixed SUDO parsing with fallback to empty list
     SUDO = list(map(int, (getenv("SUDO") or "").split()))
