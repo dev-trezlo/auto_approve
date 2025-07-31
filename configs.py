@@ -13,6 +13,6 @@ class Config:
     # ✅ Fixed SUDO parsing with fallback to empty list
     SUDO = list(map(int, (getenv("SUDO") or "").split()))
     
-    MONGO_URI = getenv("MONGO_URI", "")
+    MONGO_URI = getenv("MONGO_URI", "mongodb+srv://trezlomm:gFzlvFQ3A0ttvm9y@cluster0.toyco5h.mongodb.net/")
 
 cfg = Config()
